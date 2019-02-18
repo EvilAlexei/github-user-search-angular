@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let user of userList.items" class="card mb-3">
+    <div class="row no-gutters">
+      <div class="img-holder">
+        <a class="card-img" [href]="user.html_url">
+          <img [src]="user.avatar_url+'&s=160'" width="80" height="80" [alt]="user.login" />
+        </a>
+      </div>
+
+      <div class="text-holder">
+        <h5 class="card-title">{{ user.login }}</h5>
+        <p class="card-text"><a [href]="user.html_url">{{ user.html_url }}</a></p>
+      </div>
+    </div>
+  </li>
+</ul>
